@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>BMI Calculator</h1>
+        <label for="weight">Enter Weight (kg):</label>
+        <input type="number" id="weight" placeholder="Enter weight">
+
+        <label for="height">Enter Height (m):</label>
+        <input type="number" id="height" placeholder="Enter height">
+
+        <button onclick="calculateBMI()">Calculate BMI</button>
+        <p id="bmiResult"></p>
+        <a href="index.html" class="link">Back to Home</a>
+        <!-- <button onclick="toggleDarkMode()">Toggle Dark Mode</button> -->
+    </div>
+
+    <script>
+        function calculateBMI() {
+            const weight = parseFloat(document.getElementById('weight').value);
+            const height = parseFloat(document.getElementById('height').value);
+
+            if (!weight || !height || height === 0) {
+                document.getElementById('bmiResult').textContent = "Please enter valid values.";
+                return;
+            }
+
+            const bmi = weight / (height * height);
+            document.getElementById('bmiResult').textContent = `Your BMI is: ${bmi.toFixed(2)}`;
+        }
+
+        <!-- function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        } -->
+    </script>
+</body>
+</html>

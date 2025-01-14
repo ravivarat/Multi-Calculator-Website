@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Age Calculator</h1>
+        <label for="dob">Enter Your Date of Birth:</label>
+        <input type="date" id="dob" oninput="calculateAge()">
+        <p id="result"></p>
+        <a href="index.html" class="link">Go to Home</a>
+        <!-- <button onclick="toggleDarkMode()">Toggle Dark Mode</button> -->
+    </div>
+
+    <script>
+        function calculateAge() {
+            const dob = document.getElementById('dob').value;
+            const dobDate = new Date(dob);
+            const today = new Date();
+            let age = today.getFullYear() - dobDate.getFullYear();
+            const monthDiff = today.getMonth() - dobDate.getMonth();
+            const dayDiff = today.getDate() - dobDate.getDate();
+
+            if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+                age--;
+            }
+
+            document.getElementById('result').textContent = `You are ${age} years old.`;
+        }
+
+        <!-- function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        } -->
+    </script>
+</body>
+</html>
