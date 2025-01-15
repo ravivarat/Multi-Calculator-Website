@@ -1,4 +1,4 @@
-Project Title: Multi-Calculator Website
+Project Title: Multi-Calculator Website (One Stop for All Your Calculations: Age, Percent, BMI, Simple Interest)
 Overview:
 This project is a multi-functional web-based calculator that includes four different types of calculators on a single website. Each calculator is designed for a specific purpose and is linked through a central homepage with four buttons, allowing users to navigate easily between them. The calculators included are:
 
