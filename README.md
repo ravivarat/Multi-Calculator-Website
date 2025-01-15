@@ -29,9 +29,7 @@ Formula: BMI = weight / (height * height).
 
 Users can calculate the simple interest based on principal, rate of interest, and time.
 Formula: Simple Interest = (Principal * Rate * Time) / 100.
-✅ Dark Mode Toggle:
 
-A dark mode feature is included on every page for a better visual experience.
 ✅ Navigation Between Calculators:
 
 All calculators are interconnected through navigation buttons.
